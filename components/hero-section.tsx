@@ -12,6 +12,8 @@ export default function HeroSection() {
       >
         <div className="text-right">
           <h1
+            data-aos="fade-right"
+            data-aos-delay="150"
             className="hyphens-auto font-georgia text-6xl md:text-7xl
         lg:text-8xl leading-[1.1]"
           >
@@ -20,11 +22,17 @@ export default function HeroSection() {
               Your <span className="">Business</span>
             </span>
           </h1>
-          <p className="mt-5 text-lg font-open-sans md:w-[55%] ml-auto">
+          <p
+            data-aos="fade-right"
+            data-aos-delay="250"
+            className="mt-5 text-lg font-open-sans md:w-[55%] ml-auto"
+          >
             Want to be an entrepreneurs? Learn how to get started on your
             business in 10 steps
           </p>
-          <Button className="mt-5">read more</Button>
+          <Button data-aos="fade-right" data-aos-delay="350" className="mt-5">
+            read more
+          </Button>
         </div>
       </Wrapper>
     </section>

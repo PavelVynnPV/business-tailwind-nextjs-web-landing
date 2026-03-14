@@ -1,6 +1,10 @@
+'use client'
+
 import Wrapper from "@/components/layout/wrapper";
 import P from "@/components/p";
 import Image from "next/image";
+
+import Tilt from "react-parallax-tilt";
 
 export type InfoCard = {
   id: string;
@@ -62,27 +66,32 @@ export default function InfoCardsSection() {
           {infoCards.map((card) => {
             if (card.type === "image") {
               return (
-                <div className="relative min-h-[320px]" key={card.id}>
-                  <Image
-                    fill
-                    src={card.src!}
-                    alt={card.alt || ""}
-                    className="object-cover"
-                  />
-                </div>
+                <Tilt>
+                  <div className="relative min-h-[320px]" key={card.id}>
+                    <Image
+                      fill
+                      src={card.src!}
+                      alt={card.alt || ""}
+                      className="object-cover"
+                    />
+                  </div>
+                </Tilt>
               );
             } else if (card.type === "text") {
               return (
-                <div
-                  key={card.id}
-                  className="p-8 min-h-[320px] flex items-center justify-center"
-                  style={{ backgroundColor: card.bgColor }}
-                >
-                  <div>
-                    <h4 className="text-2xl font-georgia">{card.title}</h4>
-                    <P className="mt-5">{card.description}</P>
+                <Tilt>
+                  {" "}
+                  <div
+                    key={card.id}
+                    className="p-8 min-h-[320px] flex items-center justify-center"
+                    style={{ backgroundColor: card.bgColor }}
+                  >
+                    <div>
+                      <h4 className="text-2xl font-georgia">{card.title}</h4>
+                      <P className="mt-5">{card.description}</P>
+                    </div>
                   </div>
-                </div>
+                </Tilt>
               );
             }
           })}

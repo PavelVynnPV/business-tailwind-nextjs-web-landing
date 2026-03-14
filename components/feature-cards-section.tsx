@@ -53,15 +53,18 @@ export default function FeatureCardsSection() {
     <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
       {businessSteps.map((item) => (
         <div
+          data-aos="zoom-in"
+          data-aos-anchor-placement="top-center"
           key={item.id}
           className="text-white px-8 py-24 text-center"
           style={{ backgroundColor: item.cardColor }}
         >
           <div className="w-fit mx-auto">
-            <item.icon className="size-12 mx-auto" style={{ color: item.iconColor }} />
-            <h2 className="text-2xl font-georgia mt-5">
-              {item.title}
-            </h2>
+            <item.icon
+              className="size-12 mx-auto"
+              style={{ color: item.iconColor }}
+            />
+            <h2 className="text-2xl font-georgia mt-5">{item.title}</h2>
             <p className="text-sm mt-5 leading-[1.6] font-open-sans">
               {item.description}
             </p>

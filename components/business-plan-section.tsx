@@ -13,7 +13,12 @@ export default function BusinessPlanSection() {
           Competitive analysis helps you make your business unique. Combine them
           to find a competitive advantage for your small business.
         </P>
-        <Button className="mt-8" variant="secondary">
+        <Button
+          data-aos="fade-up"
+          data-aos-duration="350"
+          className="mt-8"
+          variant="secondary"
+        >
           read more
         </Button>
       </div>

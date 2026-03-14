@@ -4,10 +4,18 @@ import { Button } from "./ui/button";
 export default function () {
   return (
     <div className="flex flex-col md:flex-row">
-      <div className="relative w-full min-h-[400px] md:min-h-auto">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="300"
+        className="relative w-full min-h-[400px] md:min-h-auto"
+      >
         <Image fill className="object-cover" src="/person.jpeg" alt="person" />
       </div>
-      <div className="w-full bg-[#01345b] text-white text-center">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="300"
+        className="w-full bg-[#01345b] text-white text-center"
+      >
         <div className="py-28 px-12">
           <h3 className="text-5xl leading-[1.1] hyphens-auto">
             How We Help Small Business

@@ -7,17 +7,20 @@ import HowWeHelpSection from "@/components/how-we-help-section";
 import InfoCardsSection from "@/components/info-cards-section";
 import ContactSections from "@/components/contact-section";
 
+import AOSInit from "@/components/aos-init";
+
 export default function Home() {
   return (
     <main>
-      <HeroSection/>
-      <FeatureCardsSection/>
-      <HowWeHelpSection/>
-      <HighlightSection/>
-      <BusinessPlanSection/>
-      <InfoCardsSection/>
-      <CustomersSection/>
-      <ContactSections/>
+      <AOSInit />
+      <HeroSection />
+      <FeatureCardsSection />
+      <HowWeHelpSection />
+      <HighlightSection />
+      <BusinessPlanSection />
+      <InfoCardsSection />
+      <CustomersSection />
+      <ContactSections />
     </main>
   );
 }
